@@ -6,7 +6,7 @@
 #    By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/21 20:28:46 by allferna          #+#    #+#              #
-#    Updated: 2026/05/21 21:59:06 by allferna         ###   ########.fr        #
+#    Updated: 2026/05/25 23:33:09 by allferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,23 +16,29 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 
+AR          = ar rcs
+RM          = rm -f
 
+HEADERS     = ft_printf.h
 
+SRCS        = ft_printf.c \
+				 ft_printf_utils.c
+
+OBJS        = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(LIBC) $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
-
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -41,4 +47,4 @@ fclean: clean
 re: fclean all
 
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re 
