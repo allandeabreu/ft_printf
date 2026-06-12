@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 20:39:04 by allferna          #+#    #+#             */
-/*   Updated: 2026/05/25 23:33:10 by allferna         ###   ########.fr       */
+/*   Updated: 2026/06/12 15:43:56 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include <unistd.h> // Se você for usar a função write diretamente aqui
 
 int ft_printf(const char *format, ...);
+int	ft_put_c(char c);
+int	ft_put_s(char *s);
+int	ft_put_p(void *ptr);
+int	ft_put_d_i(int nbr);
+int	ft_put_u(unsigned int nbr);
+int	ft_put_x(unsigned int nbr, int spec);
 
 #endif
 

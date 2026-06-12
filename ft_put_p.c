@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_put_p.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/21 19:09:32 by allferna          #+#    #+#             */
-/*   Updated: 2026/06/12 15:47:46 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/06/03 20:26:11 by allanbreu         #+#    #+#             */
+/*   Updated: 2026/06/12 15:56:38 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *format, ...)
+int ft_put_p(void *ptr)
 {
-	va_list args;
-	int total_printed;
-	int i;
+	unsigned long address;
+	int count;
 
-	va_start(args, format);
-
-	total_printed = 0;
-	i = 0;
-
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			total_printed += ft_check_format(format[i], args);
-		}
-		else
-		{
-			write(1, &format[i], 1);
-			total_printed++;
-		}
-		i++;
-	}
-	va_end(args);
-	return (total_printed);
+	if (!ptr)
+		return (ft_put_s("(nil)"));
+	address = (unsigned long)ptr;
+	count = 0;
+	count += ft_put_s("0x");
+	count += ft_put_ptr_hex(address);
+	return (count);
 }

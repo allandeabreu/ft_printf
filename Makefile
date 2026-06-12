@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+         #
+#    By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/21 20:28:46 by allferna          #+#    #+#              #
-#    Updated: 2026/05/25 23:33:09 by allferna         ###   ########.fr        #
+#    Updated: 2026/06/12 15:54:03 by allanbreu        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,13 @@ RM          = rm -f
 HEADERS     = ft_printf.h
 
 SRCS        = ft_printf.c \
-				 ft_printf_utils.c
+		  ft_check_format.c \
+		  ft_put_c.c \
+		  ft_put_s.c \
+		  ft_put_p.c \
+		  ft_put_d_i.c \
+		  ft_put_u.c \
+		  ft_put_x.c
 
 OBJS        = $(SRCS:.c=.o)
 
