@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_c.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
+/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:04:37 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/06/03 12:34:59 by allanbreu        ###   ########.fr       */
+/*   Updated: 2026/06/12 17:26:29 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_put_c(char c)
+int	ft_put_c(char c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }

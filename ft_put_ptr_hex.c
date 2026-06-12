@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_s.c                                         :+:      :+:    :+:   */
+/*   ft_put_ptr_hex.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 11:27:58 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/06/12 17:27:47 by allferna         ###   ########.fr       */
+/*   Created: 2026/06/12 17:45:44 by allferna          #+#    #+#             */
+/*   Updated: 2026/06/12 19:23:42 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_put_s(char *s)
+int	ft_put_ptr_hex(unsigned long nbr)
 {
-	int	i;
+	int		count;
+	char	*base;
 
-	i = 0;
-	if (!s)
-		s = "(null)";
-	while (s[i] != '\0')
+	base = "0123456789abcdef";
+	if (nbr > 15)
 	{
-		write(1, &s[i], 1);
-		i++;
+		count += ft_put_ptr_hex(nbr / 16);
 	}
-	return (i);
+	count += write(1, &base[nbr % 16], 1);
+	return (count);
 }
