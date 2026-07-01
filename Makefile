@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+         #
+#    By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/21 20:28:46 by allferna          #+#    #+#              #
-#    Updated: 2026/06/12 15:54:03 by allanbreu        ###   ########.fr        #
+#    Updated: 2026/06/16 19:29:08 by allferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf.a 
+NAME = libftprintf.a 
 
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror

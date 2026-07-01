@@ -6,7 +6,7 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:44:17 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/06/12 17:23:42 by allferna         ###   ########.fr       */
+/*   Updated: 2026/06/22 21:24:36 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_put_x(unsigned int x, int spec)
 {
-	int		count;
-	char	*base;
+	unsigned int	count;
+	char			*base;
 
 	count = 0;
 	if (spec == 'x')

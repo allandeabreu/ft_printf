@@ -6,7 +6,7 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 12:32:54 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/06/12 17:25:08 by allferna         ###   ########.fr       */
+/*   Updated: 2026/06/16 19:30:56 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ int	ft_put_d_i(int n)
 	}
 	if (n > 9)
 	{
-		ft_put_d_i(n / 10);
-		count++;
+		count += ft_put_d_i(n / 10);
 	}
 	c = (n % 10) + '0';
 	count += write(1, &c, 1);
